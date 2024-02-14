@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+        <link rel="stylesheet" href "style.css">
+		<title>NCAA Stats</title>
+	</head>
+	<body>
+		<h1>Schedule/Results</h1>
+		<table border="1">
+			<tr>
+				<th>Date</th>
+				<th>Opponent</th>
+				<th>Result</th>
+				<th>Attendance</th>
+			</tr>
+			{{range .ScheduleResults}}
+				<tr>
+					<td>{{.Date}}</td>
+					<td>{{.Opponent}}</td>
+					<td>{{.Result}}</td>
+					<td>{{.Attendance}}</td>
+				</tr>
+			{{end}}
+		</table>
+
+		<h1>Team Stats</h1>
+		<table border="1">
+			<tr>
+				<th>Stat</th>
+				<th>Rank</th>
+				<th>Value</th>
+			</tr>
+			{{range .TeamStats}}
+				<tr>
+					<td>{{.Stat}}</td>
+					<td>{{.Rank}}</td>
+					<td>{{.Value}}</td>
+				</tr>
+			{{end}}
+		</table>
+
+		<h1>Individual Leaders</h1>
+		<table border="1">
+			<tr>
+				<th>Stat</th>
+				<th>Player</th>
+				<th>Value</th>
+			</tr>
+			{{range .IndividualLeaders}}
+				<tr>
+					<td>{{.Stat}}</td>
+					<td>{{.Player}}</td>
+					<td>{{.Value}}</td>
+				</tr>
+			{{end}}
+		</table>
+	</body>
+	</html>

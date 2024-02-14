@@ -1,0 +1,19 @@
+/* style.css */
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 30%;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
